@@ -4,6 +4,7 @@ const routes = require("./routes");
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
+require ("dotenv").config();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -20,8 +21,8 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/creelDB";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
+const MONGODB_URI = process.env.CONNECTIONKEY;
+mongoose.connect(MONGODB_URI || "mongodb://localhost/creelDB", { useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
     if (error) {
         console.log(error);
     } else {
