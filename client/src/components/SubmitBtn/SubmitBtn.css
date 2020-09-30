@@ -1,0 +1,13 @@
+.submit-btn {
+    background-color: rgb(1, 36, 56);
+    color: white;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: -20px;
+    margin-bottom: 80px;
+  }
+  
+  .submit-btn:hover {
+    color: white;
+  }
+  

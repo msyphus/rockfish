@@ -1,0 +1,44 @@
+.btn {
+    background-color: rgb(1, 36, 56);
+    width: 110px;
+    margin-left: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.popover {
+    border: 2px solid rgb(154, 197, 223);
+}
+
+#popAll, #popGame {
+    background-color: rgb(157, 221, 229);
+}
+
+#popGood {
+    background-color: rgb(113, 247, 73);
+}
+
+#popVul {
+    background-color: rgb(247, 247, 89);
+}
+
+#popThreat {
+    background-color: rgb(250, 176, 37);
+}
+
+#popEndanger {
+    background-color: rgb(247, 22, 22);
+}
+
+#popUnknown {
+    background-color: rgb(177, 174, 174);
+}
+
+.arrow {
+    border-right-color: red !important;
+}

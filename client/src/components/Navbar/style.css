@@ -1,0 +1,61 @@
+.desktop-navbar {
+    background-color: rgb(248, 85, 35);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar-header {
+    width: auto;
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    margin-top: 7px;
+}
+
+a.navbar-brand.active {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: white;
+    font-size: 30px;
+    margin-right: -10px;
+    margin-left: -11.5px;
+    margin-bottom: -3px;
+    margin-top: 2px;
+}
+
+.nav-item .login {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    position: static;
+}
+
+.login {
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    margin-top: 7px;
+}
+
+.login:hover {
+    color: white;
+    font-size: 30px;
+    margin-right: -3px;
+    margin-left: -13.5px;
+    margin-bottom: -3px;
+    margin-top: 2px;
+    text-decoration: none;
+}

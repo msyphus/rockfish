@@ -1,0 +1,14 @@
+.refList {
+    list-style-type: none;
+}
+
+.refList li {
+    display: inline;
+    padding: 0 10px;
+    text-decoration: underline;
+    font-size: 10px;
+}
+
+#footLink {
+    color: white;
+}

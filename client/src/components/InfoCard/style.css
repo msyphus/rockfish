@@ -1,0 +1,36 @@
+.info-card {
+    position: relative;
+    color: white;
+    background-color: rgba(100, 109, 117, 0.7);
+    margin: 25px;
+    margin-top: 60px;
+    width: 20rem;
+    margin-bottom: 100px;
+    padding: 5px;
+    border: none;
+    z-index: 1;
+}
+
+.info-card:hover {
+    margin-top: 50px;
+    margin-bottom: 110px;
+}
+
+.card-title {
+    font-size: 45px;
+    font-weight: bold;
+    height: 100px;
+    vertical-align: center;
+    margin-bottom: 25px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.card-text {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.col-md-3 {
+    float: none;
+    display: inline-block;
+}
