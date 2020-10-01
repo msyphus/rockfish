@@ -1,13 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 require ("dotenv").config();
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.json());
 
 if (process.env.NODE_ENV === "production") {
     // Express will serve up production assets
