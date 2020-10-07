@@ -1,13 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
+const routes = require("./routes");
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
-require ("dotenv").config();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -16,18 +15,18 @@ app.use(express.json());
 
 if (process.env.NODE_ENV === "production") {
     // Express will serve up production assets
-    app.use(express.static(path.join(__dirname, "/client/build")));
+    app.use(express.static("client/build"));
     // Express will serve up the front-end index.html file if it doesn't recognize the route
     app.get('*', function (req, res) {
-        const index = path.join(__dirname, '/client/build', 'index.html');
+        const index = path.join(__dirname, 'client/build', 'index.html');
         res.sendFile(index);
     });
 }
 
 app.use(routes);
 
-const MONGODB_URI = process.env.CONNECTIONKEY;
-mongoose.connect(MONGODB_URI || "mongodb://localhost/creelDB", { useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/creelDB";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
     if (error) {
         console.log(error);
     } else {
