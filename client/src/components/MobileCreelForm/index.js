@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import { Form, InputGroup } from 'react-bootstrap';
 
 function MobileCreelForm(props) {

@@ -1,8 +1,8 @@
 .wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    height: 100vh;
-    padding: 30px 90px 60px 90px;
-  }
-    
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 100vh;
+  padding: 30px 90px 60px 90px;
+}
+  

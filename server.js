@@ -2,13 +2,17 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const bodyParser = require("body-parser");
+const passport = require("passport");
+const users = require("./routes/api/users");
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 require ("dotenv").config();
 
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 if (process.env.NODE_ENV === "production") {
     // Express will serve up production assets
@@ -30,6 +34,12 @@ mongoose.connect(MONGODB_URI || "mongodb://localhost/creelDB", { useNewUrlParser
         console.log("mongoose connection successful");
     }
 });
+
+app.use(passport.initialize());
+
+require("./config/pass")(passport);
+
+app.use("/api/users", users);
 
 app.listen(PORT, () => {
     console.log(`🌎 ==> API server now on port ${PORT}!`);

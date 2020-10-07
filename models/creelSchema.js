@@ -8,6 +8,6 @@ const creelSchema = new Schema({
     locationCaught: { type: String }
 });
 
-const Creel = mongoose.model("Creel", creelSchema);
+const CreelMod = mongoose.model("Creel", creelSchema);
 
-module.exports = Creel;
+module.exports = CreelMod;
